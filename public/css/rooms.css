@@ -1,0 +1,13 @@
+.card
+{
+    border: 0px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.item
+{
+    transition:.5s ease;
+}
+.item:hover
+{
+    filter: brightness(80%);
+}

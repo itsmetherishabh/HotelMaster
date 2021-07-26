@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+<div class="row">
+  <div class="col-lg-5 col-md-6 col-10 mt-4" style="margin:auto; color:rgb(5, 5, 5);padding:2rem  ; background-color: rgba(2, 12, 29 ,0.7) ; border-radius: 0.5rem; margin-bottom: 2rem;"  >
+  <h2 style="text-align:center;color:aliceblue;">
+    REGISTER YOUR HOTEL HERE
+  </h2>
+  <form action="/hotel" method="post" class="mt-4 p-3">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter hotel name" required="true">
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Hotel Description</label>
+          <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" required="true">
+          <small class="form-text text-muted">Description has to be of at least 100 characters.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" class="form-control" id="location" name="locations" placeholder="Enter the location" required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="capacity">Please fill capacity</label><br/>
+          <label for="sdeluxe">Super Deluxe</label>
+          <input type="number" id="sdeluxe" name="sdeluxe" required="true"/><br/>
+          <label for="deluxe">Deluxe</label>
+          <input type="number" id="deluxe" name="deluxe" required="true"/><br/>
+          <label for="executive">Executive</label>
+          <input type="number" id="executive" name="executive" required="true"/>
+        </div>
+
+        <div class="form-group">
+          <label for="images">Upload a picture</label><br/>
+          <input type="file" class="btn btn-sm btn-primary" id="images" name="images" placeholder="Upload a picture of your hotel">
+        </div>
+                    
+
+      <button type="submit" class="btn btn-warning" name="submit">Submit</button>
+  </form>
+  </div>
+</div>
+<%- include('partials/footer') %>

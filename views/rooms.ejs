@@ -1,0 +1,27 @@
+<div class="room-body">
+    <%- include('partials/header') %>
+    <div class="container">
+        <h2 style="text-align:center;padding:1rem;color:rgb(239, 243, 245);background:rgba(102, 35, 35, 0.7);max-width: 300px;border-radius: 0 0 15px 15px;" class="m-auto">HOTELS IN <%=city%></h2>
+    </div>
+    <div class="container">
+        <div class="row mb-4">
+            <% for(var i=0; i<hotel.length; i++) { %>
+            <div class="col-lg-3 col-md-4 col-12 card p-0 mt-4">
+                <img class="card-img-top" src="css/images/luxury-hotel-room-bedroom-furniture-set-wallpaper-preview.jpg" alt="Hotel Image">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%=hotel[i].name%>
+                    </h5>
+                    <p class="card-text">
+                        <b id="dname"><%=hotel[i].locations%></b>, India. <br> Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <form action="/hotel_details" method="post">
+                        <button value=<%=hotel[i]._id%> name="hotelId" type="submit" class="btn btn-primary" >Know More...</button>
+                    </form>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+ <%- include('partials/footer') %>
